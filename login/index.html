@@ -15,18 +15,23 @@
          <form>
             <div class="field">
                <div class="fas fa-envelope"></div>
-               <input type="text" placeholder="Email or Phone">
+               <!-- PENYESUAIAN 1: Tambahkan id="username" di sini -->
+               <input type="text" id="username" placeholder="Email or Phone" required>
             </div>
             <div class="field">
                <div class="fas fa-lock"></div>
-               <input type="password" placeholder="Password">
+               <input type="password" placeholder="Password" required>
             </div>
-            <button>LOGIN</button>
+            <!-- PENYESUAIAN 2: Ubah button jadi type="button" dan tambahkan onclick="login()" -->
+            <button type="button" onclick="login()">LOGIN</button>
             <div class="link">
                Not a member?
                <a href="#">Signup now</a>
             </div>
          </form>
       </div>
+
+      <!-- PENYESUAIAN 3: Panggil file welcome.js tepat sebelum tag penutup body -->
+      <script src="js/welcome.js"></script>
    </body>
 </html>
