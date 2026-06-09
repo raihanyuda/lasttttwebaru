@@ -105,9 +105,12 @@ button:hover{
   text-decoration: underline;
 }
 
+/* ==========================================================================
+   KODE TAMBAHAN LKPD NOMOR 10 - NOTIFIKASI ALERT ESTETIK (TEKS HITAM)
+   ========================================================================== */
 .alert {
-    background: #e44e4e;
-    color: white;
+    background: #e44e4e; /* Warna latar belakang kotak (Merah) */
+    color: #000000;      /* WARNA TULISAN DIGANTI JADI HITAM PEKAT */
     padding: 10px;
     text-align: center;
     border: 1px solid #b32929;
@@ -115,6 +118,7 @@ button:hover{
     margin-bottom: 15px;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
+    font-weight: bold;   /* Ditambah agar tulisan hitamnya lebih tebal dan jelas */
 }
 
 #message {
