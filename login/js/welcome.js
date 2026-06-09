@@ -13,10 +13,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const user = localStorage.getItem("username");
 
     if (user) {
-        document.getElementById("userInfo").innerText = "Halo, " + user;
+        const userInfo = document.getElementById("userInfo");
+        if (userInfo) {
+            // Kita masukkan teksnya sekaligus
+            userInfo.innerText = "Halo, " + user;
+        
+            // Kita paksa tambahkan class Bootstrap langsung lewat JavaScript di sini!
+            userInfo.classList.add("text-success", "fw-bold", "fs-4");
+        }
 
-        document.getElementById("authArea").innerHTML = `
-            <button onclick="logout()" class="btn btn-sm btn-danger text-white">Logout</button>
+        const authArea = document.getElementById("authArea");
+        if (authArea) {
+            authArea.innerHTML = `
+                <button onclick="logout()" class="btn btn-sm btn-danger text-white">Logout</button>
+        `;
+    }
+}
         `;
     }
 
