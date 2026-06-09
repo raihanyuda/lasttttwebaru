@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
         location.reload();
     }
 
-    // 2. Fungsi mengarah ke halaman login
+    // 2. Fungsi mengarah ke halaman login dari index utama
     function goLogin() {
         window.location.href = "login/index.html";
     }
 
-    // 3. Pengecekan status login di halaman utama
+    // 3. Pengecekan status login di halaman utama Zay Shop
     const user = localStorage.getItem("username");
 
     if (user) {
@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // 4. Daftarkan semua ke window
+    // 4. Daftarkan fungsi ke objek window agar bisa diakses HTML
     window.goLogin = goLogin;
     window.logout = logout;
 
-}); // Kurung penutup ini yang sempat hilang dan bikin eror!
+});
