@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     function goLogin() {
+        // Kakak perbaiki jalurnya di sini agar mengarah langsung ke folder login yang benar
         window.location.href = "login/index.html";
     }
 
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("userInfo").innerText = "Halo, " + user;
 
         document.getElementById("authArea").innerHTML = `
-            <button onclick="logout()" class="nav-cta">Logout</button>
+            <button onclick="logout()" class="btn btn-sm btn-danger text-white">Logout</button>
         `;
     }
 
