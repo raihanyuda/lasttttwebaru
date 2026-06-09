@@ -12,6 +12,8 @@
             SIGNUP
          </div>
          <form>
+            <div id="message"></div>
+
             <div class="field">
                <div class="fas fa-user"></div>
                <input type="text" id="regUsername" placeholder="Buat Username Baru" required>
@@ -31,28 +33,33 @@
       <script>
          function jalankanDaftar() {
              const usernameBaru = document.getElementById("regUsername").value.trim();
+             const messageBox = document.getElementById("message");
+
+             // Reset pesan lama jika ada
+             messageBox.className = "";
+             messageBox.innerText = "";
 
              if (usernameBaru === "") {
-                 alert("Username tidak boleh kosong!");
+                 messageBox.className = "alert";
+                 messageBox.innerText = "Username tidak boleh kosong!";
                  return;
              }
 
-             // Ambil database daftar user di localStorage (jika belum ada, buat array baru)
+             // Ambil database daftar user di localStorage
              let daftarUser = JSON.parse(localStorage.getItem("daftarUser")) || [];
 
-             // JIKA USERNAME SUDAH PERNAH DIDAFFTARKAN (Poin Instruksi LKPD)
+             // VALIDASI USERNAME GANDA (Poin Utama LKPD Nomor 10)
              if (daftarUser.includes(usernameBaru)) {
-                 alert("Peringatan: Username sudah digunakan! Silakan gunakan username baru.");
+                 messageBox.className = "alert";
+                 messageBox.innerText = "Peringatan: Username sudah digunakan! Coba nama lain.";
                  return; 
              }
 
-             // Jika berhasil, masukkan ke dalam array database browser
+             // Jika berhasil, simpan ke database browser
              daftarUser.push(usernameBaru);
              localStorage.setItem("daftarUser", JSON.stringify(daftarUser));
 
              alert("Registrasi berhasil! Menuju form login...");
-             
-             // Diarahkan langsung ke form login setelah berhasil
              window.location.href = "index.html";
          }
       </script>
