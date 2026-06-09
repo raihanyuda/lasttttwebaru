@@ -104,3 +104,19 @@ button:hover{
 .link a:hover{
   text-decoration: underline;
 }
+
+.alert {
+    background: #e44e4e;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #b32929;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+#message {
+    width: 100%;
+}
