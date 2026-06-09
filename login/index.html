@@ -12,6 +12,8 @@
             LOGIN
          </div>
          <form>
+            <div id="message"></div>
+
             <div class="field">
                <div class="fas fa-envelope"></div>
                <input type="text" id="username" placeholder="Masukkan Username" required>
@@ -31,17 +33,24 @@
       <script>
          function jalankanLogin() {
              const usernameInput = document.getElementById("username").value.trim();
+             const messageBox = document.getElementById("message");
+
+             // Reset pesan lama jika ada
+             messageBox.className = "";
+             messageBox.innerText = "";
 
              if (usernameInput === "") {
-                 alert("Username tidak boleh kosong!");
+                 messageBox.className = "alert";
+                 messageBox.innerText = "Username tidak boleh kosong!";
                  return;
              }
 
              let daftarUser = JSON.parse(localStorage.getItem("daftarUser")) || [];
 
-             // Validasi apakah username yang diinput sudah terdaftar lewat signup atau belum
+             // Validasi apakah username sudah terdaftar atau belum
              if (!daftarUser.includes(usernameInput)) {
-                 alert("Username belum terdaftar! Silakan signup terlebih dahulu.");
+                 messageBox.className = "alert";
+                 messageBox.innerText = "Username belum terdaftar! Silakan signup dahulu.";
                  return;
              }
 
