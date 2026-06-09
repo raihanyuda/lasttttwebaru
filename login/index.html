@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
@@ -15,15 +14,13 @@
          <form>
             <div class="field">
                <div class="fas fa-envelope"></div>
-               <!-- PENYESUAIAN 1: Tambahkan id="username" di sini -->
                <input type="text" id="username" placeholder="Email or Phone" required>
             </div>
             <div class="field">
                <div class="fas fa-lock"></div>
                <input type="password" placeholder="Password" required>
             </div>
-            <!-- PENYESUAIAN 2: Ubah button jadi type="button" dan tambahkan onclick="login()" -->
-            <button type="button" onclick="login()">LOGIN</button>
+            <button type="button" onclick="jalankanLogin()">LOGIN</button>
             <div class="link">
                Not a member?
                <a href="#">Signup now</a>
@@ -31,7 +28,22 @@
          </form>
       </div>
 
-      <!-- PENYESUAIAN 3: Panggil file welcome.js tepat sebelum tag penutup body -->
-      <script src="js/welcome.js"></script>
+      <script>
+         function jalankanLogin() {
+             const usernameInput = document.getElementById("username").value;
+
+             // Validasi jika input kosong
+             if (usernameInput.trim() === "") {
+                 alert("Username tidak boleh kosong!");
+                 return;
+             }
+
+             // Simpan nama ke localStorage
+             localStorage.setItem("username", usernameInput);
+
+             // Kembali ke halaman utama (Zay Shop) yang berada satu tingkat di luar folder ini
+             window.location.href = "../index.html"; 
+         }
+      </script>
    </body>
 </html>
