@@ -5,22 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aero Shop | Produk Populer Aerostreet Terbaik</title>
     
-    <!-- Menghubungkan ke Gaya CSS Bawaan Template -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/templatemo.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     
-    <!-- Menghubungkan ke Font dan Ikon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 </head>
 <body>
 
-    <!-- Bagian Menu Navigasi Atas (Navbar) -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
             
-            <!-- Nama Toko: Aero Shop -->
             <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
                 Aero
             </a>
@@ -29,7 +25,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Menu Navigasi Bahasa Indonesia -->
             <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
@@ -48,7 +43,6 @@
                     </ul>
                 </div>
                 
-                <!-- Bagian Fitur Keranjang, Profil, dan Autentikasi Masuk/Keluar LKPD -->
                 <div class="navbar align-self-center d-flex align-items-center">
                     <a class="nav-icon position-relative text-decoration-none me-3" href="#">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
@@ -59,7 +53,6 @@
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
                     </a>
                     
-                    <!-- AREA STATUS LOG IN -->
                     <span id="userInfo" class="me-3 text-muted">Belum login</span>
                     <div id="authArea" class="d-inline">
                         <button onclick="goLogin()" class="btn btn-sm btn-success text-white fw-bold px-3">Masuk</button>
@@ -69,9 +62,6 @@
 
         </div>
     </nav>
-    <!-- Akhir Menu Navigasi -->
-
-    <!-- Bagian Banner Selamat Datang Utama -->
     <div class="container-fluid bg-light py-5">
         <div class="container py-5 text-center">
             <div class="row">
@@ -84,17 +74,12 @@
                         Silakan daftarkan akun baru atau masuk ke sistem terlebih dahulu melalui tombol di pojok kanan atas untuk mulai mengaktifkan fitur keranjang belanja interaktif Anda.
                     </p>
                     <div class="mt-4">
-                        <!-- Tombol langsung lompat ke id="sepatu-pilihan" di bawah, tombol lama sudah dihapus -->
                         <a href="#sepatu-pilihan" class="btn btn-success btn-lg px-5 text-white fw-bold">Belanja Sekarang</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Akhir Banner Selamat Datang -->
-
-
-    <!-- Bagian Kategori "Sepatu Pilihan" Aerostreet -->
     <section id="sepatu-pilihan" class="container py-5">
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
@@ -103,31 +88,24 @@
             </div>
         </div>
         <div class="row justify-content-center mt-4">
-            <!-- Jenis 1: Aerostreet Hoops -->
             <div class="col-12 col-md-4 p-5 mt-3 text-center">
                 <a href="#"><img src="assets/img/hoops.jfif" class="rounded-circle img-fluid border"></a>
                 <h5 class="text-center mt-3 mb-3 fw-bold">Aerostreet Hoops</h5>
-                <!-- Ganti LINK_SHOPEE_DI_SINI dengan link produk tokomu -->
                 <p><a href="https://id.shp.ee/HwNWhZRr" target="_blank" class="btn btn-success text-white">Buka Koleksi</a></p>
             </div>
-            <!-- Jenis 2: Aerostreet Maximo -->
             <div class="col-12 col-md-4 p-5 mt-3 text-center">
                 <a href="#"><img src="assets/img/maximos.jfif" class="rounded-circle img-fluid border"></a>
                 <h2 class="h5 text-center mt-3 mb-3 fw-bold">Aerostreet Maximo</h2>
-                <!-- Ganti LINK_SHOPEE_DI_SINI dengan link produk tokomu -->
                 <p><a href="https://id.shp.ee/4aFLpAqz" target="_blank" class="btn btn-success text-white">Buka Koleksi</a></p>
             </div>
-            <!-- Jenis 3: Aerostreet Austin -->
             <div class="col-12 col-md-4 p-5 mt-3 text-center">
                 <a href="#"><img src="assets/img/maximo.jfif" class="rounded-circle img-fluid border"></a>
                 <h2 class="h5 text-center mt-3 mb-3 fw-bold">Aerostreet Austin</h2>
-                <!-- Ganti LINK_SHOPEE_DI_SINI dengan link produk tokomu -->
                 <p><a href="https://id.shp.ee/EeGRcyRu" target="_blank" class="btn btn-success text-white">Buka Koleksi</a></p>
             </div>
         </div>
     </section>
 
-    <!-- Bagian Lokasi Toko / Google Maps -->
     <section id="lokasi-toko" class="container py-5 text-center">
         <div class="row pt-3">
             <div class="col-lg-6 m-auto">
@@ -137,18 +115,13 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-10">
-                <!-- Wadah responsive agar maps pas di layar HP maupun laptop -->
                 <div class="ratio ratio-21x9 shadow border rounded">
-                    <!-- Paste atau ganti kode <iframe> Google Maps kamu di bawah ini -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.630557222622!2d110.7326133740467!3d-7.615117375282087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a3f001050ba35%3A0xe16b58fb05037986!2sAerostreet%20Factory%20Outlet!5e0!3m2!1sid!2sid!4v1781440355956!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://maps.google.com/maps?q=Aerostreet%20Indonesia&t=&z=13&ie=UTF-8&iwloc=&output=embed" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-       LKPD POIN NOMOR 12 - VIDEO YOUTUBE DENGAN LINK REKOMENDASI KAMU
-       ========================================================================== -->
     <section id="sejarah-produk" class="container py-5 text-center bg-light border-top">
         <div class="row pt-3">
             <div class="col-lg-6 m-auto">
@@ -159,19 +132,14 @@
         <div class="row justify-content-center mt-4 mb-5">
             <div class="col-lg-8">
                 <div class="ratio ratio-16x9 shadow border rounded">
-                    <!-- Embed Video YouTube UebLWJS6nHA -->
                     <iframe src="https://www.youtube.com/embed/UebLWJS6nHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Akhir Bagian Video YouTube LKPD -->
 
-
-    <!-- Menghubungkan ke file JavaScript welcome.js -->
     <script src="login/js/welcome.js"></script>
     
-    <!-- Script Bawaan Bootstrap Template -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
